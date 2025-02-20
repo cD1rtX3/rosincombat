@@ -151,8 +151,9 @@ public abstract class PlayerEntityMixin extends LivingEntity {
 			&& !isStrong
 			&& this.isOnGround()
 			&& this.horizontalSpeed - this.prevHorizontalSpeed < this.getMovementSpeed()
-			&& this.getStackInHand(Hand.MAIN_HAND).getEnchantments()
-				.getLevel(world.getRegistryManager().get(RegistryKeys.ENCHANTMENT).getEntry(Enchantments.SWEEPING_EDGE).get()) > 0;
+			&& this.getStackInHand(Hand.MAIN_HAND).getEnchantments().getLevel(
+					world.getRegistryManager().get(RegistryKeys.ENCHANTMENT).getEntry(Enchantments.SWEEPING_EDGE).get()
+				) > 0;
 
 		float targetHealth = target instanceof LivingEntity livingEntity ? livingEntity.getHealth() : 0.0F;
 
