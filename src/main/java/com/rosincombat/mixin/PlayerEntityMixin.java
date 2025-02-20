@@ -72,7 +72,11 @@ public abstract class PlayerEntityMixin extends LivingEntity {
 		this.getAttributeInstance(EntityAttributes.PLAYER_ENTITY_INTERACTION_RANGE).setBaseValue(2.5);
 	}
 
-	@ModifyArg(method = "disableShield", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/ItemCooldownManager;set(Lnet/minecraft/item/Item;I)V"), index = 1)
+	@ModifyArg(
+		method = "disableShield",
+		at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/ItemCooldownManager;set(Lnet/minecraft/item/Item;I)V"),
+		index = 1
+	)
 	private int modifyDuration(int duration) {
 		int cleaving = this.getStackInHand(Hand.MAIN_HAND).getEnchantments()
 			.getLevel(this.getWorld().getRegistryManager().get(RegistryKeys.ENCHANTMENT).getEntry(Enchantments.EFFICIENCY).get());
@@ -283,7 +287,10 @@ public abstract class PlayerEntityMixin extends LivingEntity {
 		return -1.5F;
 	}
 
-	@WrapOperation(method = "resetLastAttackedTicks", at = @At(value = "FIELD", target = "Lnet/minecraft/entity/player/PlayerEntity;lastAttackedTicks:I", opcode = Opcodes.PUTFIELD))
+	@WrapOperation(
+		method = "resetLastAttackedTicks",
+		at = @At(value = "FIELD", target = "Lnet/minecraft/entity/player/PlayerEntity;lastAttackedTicks:I", opcode = Opcodes.PUTFIELD)
+	)
 	public void tareLastAttackedTicks(PlayerEntity self, int newValue, Operation<Void> original) {
 		int zeroValue = (int)(-0.25F * self.getAttackCooldownProgressPerTick());
 		if (this.lastAttackedTicks >= zeroValue) {
