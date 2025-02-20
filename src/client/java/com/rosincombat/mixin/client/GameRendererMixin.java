@@ -19,7 +19,7 @@ import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.gen.Accessor;
 
-import com.rosincombat.RosinRevampClient;
+import com.rosincombat.RosinCombatClient;
 
 @Mixin(value = GameRenderer.class, priority = Integer.MAX_VALUE)
 public abstract class GameRendererMixin implements AutoCloseable {
@@ -55,7 +55,7 @@ public abstract class GameRendererMixin implements AutoCloseable {
 		);
 
 		// Code for sweeping attacks. Someone please improve this.
-		if (entityHitResult == null && RosinRevampClient.canPlayerSweep(client.player)) {
+		if (entityHitResult == null && RosinCombatClient.canPlayerSweep(client.player)) {
 			List<LivingEntity> sweepTargets = client.world.getNonSpectatingEntities(
 				LivingEntity.class,
 				client.player.getBoundingBox().offset(client.player.getRotationVec(tickDelta).multiply(1.3)).expand(1.0, 0.25, 1.0)
