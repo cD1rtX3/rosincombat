@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "rosinrevamp",
+	"id": "rosincombat",
 	"version": "0.0.1",
-	"name": "Rosinflower's Revamp",
-	"description": "What if Mojang did things a little differently?",
+	"name": "Rosinflower's Combat",
+	"description": "The combat snapshots into modern Minecraft",
 	"authors": [
 		"Coarse Rosinflower"
 	],
@@ -11,21 +11,21 @@
 		"homepage": "https://cd1rtx3.github.io/"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/rosinrevamp/icon.png",
+	"icon": "assets/rosincombat/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.rosinrevamp.RosinRevamp"
+			"com.rosincombat.rosincombat"
 		],
 		"client": [
-			"com.rosinrevamp.RosinRevampClient"
+			"com.rosincombat.rosincombatClient"
 		]
 	},
-	"accessWidener" : "rosinrevamp.accesswidener",
+	"accessWidener" : "rosincombat.accesswidener",
 	"mixins": [
-		"rosinrevamp.mixins.json",
+		"rosincombat.mixins.json",
 		{
-			"config": "rosinrevamp.client.mixins.json",
+			"config": "rosincombat.client.mixins.json",
 			"environment": "client"
 		}
 	],

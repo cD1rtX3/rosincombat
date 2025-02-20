@@ -1,0 +1,32 @@
+{
+	"required": true,
+	"package": "com.rosincombat.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixinPriority": 0,
+	"mixins": [
+		"handlers.BoatEntityHandlers",
+		"handlers.EntityAbstractHandler",
+		"AbstractBlockMixin",
+		"BedItemMixin",
+		"BoatEntityMixin",
+		"BowItemMixin",
+		"CrossbowItemMixin",
+		"EggItemMixin",
+		"EntityMixin",
+		"HungerManagerMixin",
+		"ItemsMixin",
+		"ItemStackMixin",
+		"LivingEntityMixin",
+		"MaceItemMixin",
+		"PlayerEntityMixin",
+		"SnowballItemMixin",
+		"SwordItemMixin",
+		"TestCommandMixin",
+		"ToolMaterialsMixin",
+		"TridentItemMixin",
+		"VehicleEntityMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

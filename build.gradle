@@ -28,7 +28,7 @@ loom {
 		}
 	}
 
-	accessWidenerPath = file("src/main/resources/rosinrevamp.accesswidener")
+	accessWidenerPath = file("src/main/resources/rosincombat.accesswidener")
 }
 
 dependencies {
